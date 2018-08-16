@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block bootstraptext %}
+
+
+<div class="container">
+
+<h2> Please fill the laundry order form and details for pick up </h2>
+
+  <form method="post">
+      {% csrf_token %}
+
+        {{ form_laundry.as_ul }}
+        <button type="submit">Order</button>
+   </form>
+ </div>
+
+
+
+{% endblock %}
